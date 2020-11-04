@@ -7,6 +7,7 @@
     - Communication:
         - synchronous (RPC-style method call in _FibonacciTest.java_)
         - direct (IP of FibonacciService statically written in _FibonacciTest.java_)
+        - interface semantics with remote objects
     - Activities:
         1. function call
         2. function call is sent to JAX-WS runtime
