@@ -62,6 +62,20 @@ public class FibonacciTest {
 		}
 		// test the 25th f*-nr
 		assertEquals(result, 75025);
+
+		for (int i = 1; i<= max; i++) {
+			result = fibonacciService.next();
+			System.out.println(result);
+		}
+		assertEquals(result, 75025);
+
+		fibonacciService.restore();
+
+		for (int i = 1; i<= max; i++) {
+			result = fibonacciService.next();
+			System.out.println(result);
+		}
+		assertEquals(result, 75025);
 	}
 
 	@AfterTest
