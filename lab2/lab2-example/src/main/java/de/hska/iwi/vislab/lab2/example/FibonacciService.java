@@ -14,11 +14,11 @@ public class FibonacciService {
     private static final int INITIAL_N = 1;
 
     //In-memory database of resource
-    private int n = INITIAL_N;
+    private static int n = INITIAL_N;
 
     @POST @Produces(MediaType.APPLICATION_JSON)
     public Response next() {
-        this.n++;
+        n++;
 
         return generateResponse();
     }
@@ -30,7 +30,7 @@ public class FibonacciService {
 
     @DELETE 
     public void restore() {
-        this.n = INITIAL_N;
+        n = INITIAL_N;
     }
 
     private int fibonacci(int n) {
@@ -43,6 +43,6 @@ public class FibonacciService {
 
     private Response generateResponse() {
         FibonacciResponse response = new FibonacciResponse(n, fibonacci(n));
-        return Response.ok(response.toString(), MediaType.APPLICATION_JSON).build();
+        return Response.ok(response, MediaType.APPLICATION_JSON).build();
     }
 }

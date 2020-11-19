@@ -29,9 +29,9 @@
 
 - File downloaded into this folder with name fibonacciservice.xml
 - Characteristics:
-    - Binding: HTTP, style=document (?)
+    - Binding: HTTP, style=document
     - Communication style: direct (URL of server, no mediator)
-    - Message encoding: XML (?)
+    - Message encoding: XML
 
 ### Example request
 ```xml
