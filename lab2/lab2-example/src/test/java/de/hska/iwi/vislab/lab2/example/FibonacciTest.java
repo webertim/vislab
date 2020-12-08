@@ -25,6 +25,8 @@ public class FibonacciTest {
 		Client c = ClientBuilder.newClient().register(JacksonJsonProvider.class);
 
 		target = c.target(Main.BASE_URI);
+
+		target.path("fibonacci").request().delete();
 	}
 
 	@After
